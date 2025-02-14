@@ -9,8 +9,6 @@
 //de contenu propre à wordpress
 if(have_posts()): while(have_posts()): the_post(); ?>
 
-
-
     <div><?= get_the_content(); ?></div>
 
 <?php
