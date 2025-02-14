@@ -20,6 +20,9 @@ add_action('wp_enqueue_scripts', function () { /*enqueue = au moment ou on en au
     wp_dequeue_style('global-styles');
 }, 20);
 
+//activer l'utilisation des vignettes (image de couverture) sur nos post types:
+add_theme_support('post-thumbnails', ['recipe']);
+
 /*c'est un controleur, on met un peut tout dedans. Que du php et pas de html*/
 
 
@@ -37,6 +40,7 @@ register_post_type('recipe', [
     'rewrite' => [
         'slug' => 'recettes',
     ],
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
 ]);
 
 
